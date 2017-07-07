@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20170707181223) do
 
   create_table "reviews", force: :cascade do |t|
     t.text "body"
-    t.string "author"
     t.integer "realm_id"
     t.integer "user_id"
     t.datetime "created_at", null: false

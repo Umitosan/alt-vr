@@ -1,1 +1,8 @@
 <h3>index</h3>
+<h4>all realms</h4>
+
+<% @realms.each do |realm| %>
+  <div class="realm_summary">
+    <p>Name: <%= realm.name %></p>
+  </div>
+<% end %>

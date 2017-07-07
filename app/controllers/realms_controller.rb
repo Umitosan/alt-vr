@@ -1,6 +1,6 @@
 class RealmsController < ApplicationController
 
-  def home
+  def index
     @realms = Realm.all
   end
 
