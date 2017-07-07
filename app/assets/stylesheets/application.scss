@@ -24,16 +24,14 @@
  }
 
 
- // NAVBAR
- // NAVBAR
- // NAVBAR
+ // NAVBAR ////////////////////////////////////////////
+
  .nav-left {
    float: left;
-   margin-left: 25px;
  }
  .nav-right {
   float: right;
-  margin-right: 25px;
+  margin-right: 35px;
  }
  .nav {
 
@@ -43,9 +41,10 @@
    list-style: none;
    background-color: grey;
    text-align: center;
-   padding: 0;
-   margin: 0;
-   border-radius: 15px;
+   margin-top: 4px;
+   margin-left: 6px;
+   margin-right: 6px;
+   border-radius: 5px;
    border-color: darkgrey;
    border-width: 1px;
    border-style: solid;
