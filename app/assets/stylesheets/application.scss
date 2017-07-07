@@ -17,60 +17,97 @@
  */
 
 
- body {
-   margin: 0;
-   padding: 0;
-   background: white;
- }
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+}
 
+#flash_msgs {
+  text-align: right;
+}
+
+.realm_name {
+  font-family: 'Catamaran', sans-serif;
+  font-size: 24px;
+}
+
+#site_title {
+  text-align: center;
+  font-family: 'Cairo', sans-serif;
+  font-size: 50px;
+}
+
+#title_img {
+  width: 100%;
+  height: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#about_body, #about_title {
+  text-align: center;
+  font-family: 'Cairo', sans-serif;
+}
+
+#about_body {
+  font-size: 14px;
+}
+
+#about_title {
+  font-size: 24px;
+}
 
  // NAVBAR ////////////////////////////////////////////
 
- .nav-left {
-   float: left;
- }
- .nav-right {
-  float: right;
-  margin-right: 35px;
- }
- .nav {
+.nav-left {
+ float: left;
+}
+.nav-right {
+float: right;
+margin-right: 35px;
+}
+.nav {
 
- }
- .nav ul {
-   width: 100%;
-   list-style: none;
-   background-color: grey;
-   text-align: center;
-   margin-top: 4px;
-   margin-left: 6px;
-   margin-right: 6px;
-   border-radius: 5px;
-   border-color: darkgrey;
-   border-width: 1px;
-   border-style: solid;
- }
- .nav li {
-   display: inline;
-   font-family: 'Catamaran', sans-serif;
-   width: 120px;
-   border-bottom: none;
-   height: 50px;
-   line-height: 50px;
-   font-size: 1.4em;
-   margin-left: 3px;
-   margin-right: 3px;
- }
- .nav a {
-   text-decoration: none;
-   color: #fff;
-   display: inline-block;
-   transition: .3s background-color;
- }
- .nav a:hover {
-   background-color: #36a044;
- }
- .nav a.active {
-   background-color: #fff;
-   color: #444;
-   cursor: default;
- }
+}
+.admin_label {
+ color: #17444c;
+}
+.nav ul {
+ width: 100%;
+ list-style: none;
+ background-color: grey;
+ text-align: center;
+ margin-top: 4px;
+ margin-left: 6px;
+ margin-right: 6px;
+ border-radius: 5px;
+ border-color: darkgrey;
+ border-width: 1px;
+ border-style: solid;
+}
+.nav li {
+ display: inline;
+ font-family: 'Catamaran', sans-serif;
+ width: 120px;
+ border-bottom: none;
+ height: 50px;
+ line-height: 50px;
+ font-size: 1.4em;
+ margin-left: 3px;
+ margin-right: 3px;
+}
+.nav a {
+ text-decoration: none;
+ color: #fff;
+ display: inline-block;
+ transition: .3s background-color;
+}
+.nav a:hover {
+ background-color: #4f98a5;
+}
+.nav a.active {
+ background-color: #fff;
+ color: #444;
+ cursor: default;
+}

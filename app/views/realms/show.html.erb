@@ -1,0 +1,4 @@
+<h1> <%= @realm.name %> - details </h1>
+<p> Description: <%= @realm.description %> </p>
+<p> Price: $<%= @realm.price %> </p>
+<%= image_tag("#{@realm.image_url}", :alt => "realm image") %>

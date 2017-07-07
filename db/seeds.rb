@@ -34,7 +34,7 @@ User.create!(username: 'tadmin',
   someRealm = Realm.create!(name: Faker::HitchhikersGuideToTheGalaxy.planet,
                             description: Faker::HitchhikersGuideToTheGalaxy.quote,
                             price: 199.99,
-                            image_url: Faker::LoremPixel.image("50x60")
+                            image_url: Faker::LoremPixel.image
 
   )
   3.times do |j|

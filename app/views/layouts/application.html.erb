@@ -7,6 +7,8 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Catamaran" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pavanam" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
   </head>
 
   <body>
@@ -20,7 +22,13 @@
         </div>
         <div class="nav-right">
         <% if current_user %>
-            <li class="user"><%= current_user.email %> </li><li>  <%= link_to "Sign out", destroy_user_session_path, method: 'delete' %> </li>
+            <li class="user">
+              <%= current_user.email %>
+              <% if is_admin? %>
+                <span class="admin_label">(ADMIN)</span>
+              <% end  %>
+            </li>
+            <li>  <%= link_to "Sign out", destroy_user_session_path, method: 'delete' %> </li>
         <% else %>
             <li><%= link_to "Sign in", new_user_session_path %> / <%= link_to "Sign up", new_user_registration_path %></li>
         <% end %>
@@ -28,8 +36,10 @@
     </div>
 
     <div class="container">
-      <%= flash[:alert] %>
-      <%= flash[:notice] %>
+      <div id="flash_msgs">
+        <%= flash[:alert] %>
+        <%= flash[:notice] %>
+      </div>
       <%= yield %>
     </div>
   </body>

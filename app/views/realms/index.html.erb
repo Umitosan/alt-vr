@@ -1,8 +1,20 @@
-<h3>index</h3>
 <h4>all realms</h4>
+
+<% if is_admin?  %>
+  <div class="admin_realm_controls">
+    <%= link_to 'New realm', new_realm_path  %>
+  </div>
+<% end  %>
+
+
+<hr>
 
 <% @realms.each do |realm| %>
   <div class="realm_summary">
-    <p>Name: <%= realm.name %></p>
+    <span class="realm_name"><%= link_to realm.name, realm_path(realm) %></span>
+    <br>
+    <%= link_to "Edit", edit_realm_path(realm) %>
+    <%= link_to "Delete", realm_path(realm), :method => "delete" %>
   </div>
+  <br>
 <% end %>
