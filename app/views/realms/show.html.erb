@@ -11,13 +11,14 @@
 
 <div class="review-list">
   <% if @realm.reviews.any? %>
-    <ul>
       <% @realm.reviews.each do |review| %>
-        <li>
+        <div id="review_list">
           <p><%= review.body %> - <%= User.find(review.user_id).username %></p>
-        </li>
+          <% if is_admin? %>
+            <%= link_to 'Delete', realm_review_path(@realm, review), :method => "delete" %>
+          <% end %>
+        </div>
       <% end %>
-    </ul>
   <% else %>
     <p>There are no reviews for this realm</p>
   <% end %>
