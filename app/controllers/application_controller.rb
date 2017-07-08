@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   def authorize
     if !current_user
-      flash[:alert] = "Please sign in before browsing"
+      flash[:alert] = "Please sign in first"
       redirect_to '/'
     end
   end

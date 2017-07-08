@@ -6,15 +6,16 @@
   </div>
 <% end  %>
 
-
 <hr>
 
 <% @realms.each do |realm| %>
   <div class="realm_summary">
     <span class="realm_name"><%= link_to realm.name, realm_path(realm) %></span>
     <br>
-    <%= link_to "Edit", edit_realm_path(realm) %>
-    <%= link_to "Delete", realm_path(realm), :method => "delete" %>
+    <% if is_admin? %>
+      <%= link_to "Edit", edit_realm_path(realm) %>
+      <%= link_to "Delete", realm_path(realm), :method => "delete" %>
+    <% end %>
   </div>
   <br>
 <% end %>

@@ -1,4 +1,24 @@
-<h1> <%= @realm.name %> - details </h1>
+<p> <span id="realm_title"><%= @realm.name %> </span> realm </p>
+<%= image_tag("#{@realm.image_url}", :alt => "realm image") %>
+<br><br>
 <p> Description: <%= @realm.description %> </p>
 <p> Price: $<%= @realm.price %> </p>
-<%= image_tag("#{@realm.image_url}", :alt => "realm image") %>
+
+<hr>
+<h3>Reviews:</h3>
+
+<%= link_to "Add Review", new_realm_review_path(@realm) %>
+
+<div class="review-list">
+  <% if @realm.reviews.any? %>
+    <ul>
+      <% @realm.reviews.each do |review| %>
+        <li>
+          <p><%= review.body %> - <%= User.find(review.user_id).username %></p>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are no reviews for this realm</p>
+  <% end %>
+</div>

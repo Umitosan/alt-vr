@@ -58,6 +58,19 @@ body {
   font-size: 24px;
 }
 
+#realm_title {
+  font-size: 45px;
+  color: #053787;
+}
+
+textarea {
+  resize: auto;
+}
+
+.review-list ul{
+  list-style: none;
+}
+
  // NAVBAR ////////////////////////////////////////////
 
 .nav-left {
@@ -72,6 +85,9 @@ margin-right: 35px;
 }
 .admin_label {
  color: #17444c;
+}
+.email_label {
+  font-size: 18px;
 }
 .nav ul {
  width: 100%;

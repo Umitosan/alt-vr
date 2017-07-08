@@ -12,7 +12,6 @@ Realm.destroy_all
 Review.destroy_all
 
 
-
 testUser1 = User.create!(username: 'tuser1',
                        email: 'tuser1@gmail.com',
                        password: '1234567',
@@ -34,7 +33,7 @@ User.create!(username: 'tadmin',
   someRealm = Realm.create!(name: Faker::HitchhikersGuideToTheGalaxy.planet,
                             description: Faker::HitchhikersGuideToTheGalaxy.quote,
                             price: 199.99,
-                            image_url: Faker::LoremPixel.image
+                            image_url: 'http://lorempixel.com/800/400/abstract'
 
   )
   3.times do |j|

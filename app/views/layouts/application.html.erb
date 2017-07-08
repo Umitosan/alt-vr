@@ -23,7 +23,7 @@
         <div class="nav-right">
         <% if current_user %>
             <li class="user">
-              <%= current_user.email %>
+              <span class="email_label"><%= current_user.email %></span> 
               <% if is_admin? %>
                 <span class="admin_label">(ADMIN)</span>
               <% end  %>

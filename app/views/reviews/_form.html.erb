@@ -1,0 +1,7 @@
+<%= render('layouts/errors', :object => @review ) %>
+
+<%= form_for [@realm, @review] do |f| %>
+  <%= f.text_area :body %>
+  <br><br>
+  <p><%= f.submit %></p>
+<% end %>
