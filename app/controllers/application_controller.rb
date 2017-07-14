@@ -18,7 +18,10 @@ class ApplicationController < ActionController::Base
   end
 
   def authorize_admin
-    if current_user && !current_user.admin
+    if !current_user
+      flash[:alert] = "Please sign in first"
+      redirect_to '/'
+    elsif current_user && !current_user.admin
       flash[:alert] = "Only admins can perform that action"
       redirect_to '/'
     end
