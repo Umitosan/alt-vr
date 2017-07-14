@@ -16,14 +16,12 @@
       <ul>
         <div class="nav-left">
           <li class="home"><%= link_to "Home", root_path %></li>
-          <% if current_user %>
-            <li class="realms"><%= link_to "Realms", realms_path %></li>
-          <% end %>
+          <li class="realms"><%= link_to "Realms", realms_path %></li>
         </div>
         <div class="nav-right">
         <% if current_user %>
             <li class="user">
-              <span class="email_label"><%= current_user.email %></span> 
+              <span class="email_label"><%= current_user.email %></span>
               <% if is_admin? %>
                 <span class="admin_label">(ADMIN)</span>
               <% end  %>

@@ -1,5 +1,5 @@
 class RealmsController < ApplicationController
-  before_action :authorize, only: [:index, :new, :create, :show]
+  before_action :authorize_admin, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     @realms = Realm.all

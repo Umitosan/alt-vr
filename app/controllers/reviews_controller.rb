@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :authorize_user, only: [:new, :create, :destroy]
 
   def new
     @realm = Realm.find(params[:realm_id])

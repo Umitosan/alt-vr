@@ -30,9 +30,10 @@ User.create!(username: 'tadmin',
 
 
 5.times do |j|
+  randPrice = (randPrice = rand(50..200) + (rand(0.01..0.99))).round(2)
   someRealm = Realm.create!(name: Faker::HitchhikersGuideToTheGalaxy.planet,
                             description: Faker::HitchhikersGuideToTheGalaxy.quote,
-                            price: 199.99,
+                            price: randPrice,
                             image_url: 'http://lorempixel.com/800/400/abstract'
 
   )

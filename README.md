@@ -30,7 +30,7 @@ Alt-VR is a site dedicated to the intrepid explorers of this new dimension.  Our
 ## Setup
 
 (using OSX terminal, or Gitbash on Windows: run the following commands)
-* $`git clone https://github.com/Umitosan/atl-vr.git`
+* $`git clone https://github.com/Umitosan/alt-vr.git`
 * $`cd alt-vr`
 * $`bundle install`
 
